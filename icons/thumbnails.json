@@ -1,0 +1,150 @@
+{
+  "iconDefinitions": {
+    "FlatRock.Base.png": {
+      "iconPath": "FlatRock.Base.png"
+    },
+    "icon.png": {
+      "iconPath": "icon.png"
+    },
+    "assets-CPPProjectNode.svg": {
+      "iconPath": "assets/CPPProjectNode.svg"
+    },
+    "assets-BuildSelection.svg": {
+      "iconPath": "assets/BuildSelection.svg"
+    },
+    "assets-CSProjectNode.svg": {
+      "iconPath": "assets/CSProjectNode.svg"
+    },
+    "assets-BuildSolution.svg": {
+      "iconPath": "assets/BuildSolution.svg"
+    },
+    "assets-FilterFolderClosed.svg": {
+      "iconPath": "assets/FilterFolderClosed.svg"
+    },
+    "assets-FSProjectNode.svg": {
+      "iconPath": "assets/FSProjectNode.svg"
+    },
+    "assets-FolderClosed.svg": {
+      "iconPath": "assets/FolderClosed.svg"
+    },
+    "assets-icon.png": {
+      "iconPath": "assets/icon.png"
+    },
+    "assets-PYProjectNode.svg": {
+      "iconPath": "assets/PYProjectNode.svg"
+    },
+    "assets-JSProjectNode.svg": {
+      "iconPath": "assets/JSProjectNode.svg"
+    },
+    "assets-PropertiesFolderClosed.svg": {
+      "iconPath": "assets/PropertiesFolderClosed.svg"
+    },
+    "assets-RBProjectNode.svg": {
+      "iconPath": "assets/RBProjectNode.svg"
+    },
+    "assets-ReferenceFolderClosed.svg": {
+      "iconPath": "assets/ReferenceFolderClosed.svg"
+    },
+    "assets-TreeView.svg": {
+      "iconPath": "assets/TreeView.svg"
+    },
+    "assets-TSProjectNode.svg": {
+      "iconPath": "assets/TSProjectNode.svg"
+    },
+    "assets-sln.svg": {
+      "iconPath": "assets/sln.svg"
+    },
+    "assets-VBProjectNode.svg": {
+      "iconPath": "assets/VBProjectNode.svg"
+    },
+    "dark-BuildSolution.svg": {
+      "iconPath": "dark/BuildSolution.svg"
+    },
+    "dark-CPPProjectNode.svg": {
+      "iconPath": "dark/CPPProjectNode.svg"
+    },
+    "dark-CSProjectNode.svg": {
+      "iconPath": "dark/CSProjectNode.svg"
+    },
+    "dark-BuildSelection.svg": {
+      "iconPath": "dark/BuildSelection.svg"
+    },
+    "dark-FolderClosed.svg": {
+      "iconPath": "dark/FolderClosed.svg"
+    },
+    "dark-FilterFolderClosed.svg": {
+      "iconPath": "dark/FilterFolderClosed.svg"
+    },
+    "dark-FSProjectNode.svg": {
+      "iconPath": "dark/FSProjectNode.svg"
+    },
+    "dark-JSProjectNode.svg": {
+      "iconPath": "dark/JSProjectNode.svg"
+    },
+    "dark-PropertiesFolderClosed.svg": {
+      "iconPath": "dark/PropertiesFolderClosed.svg"
+    },
+    "dark-PYProjectNode.svg": {
+      "iconPath": "dark/PYProjectNode.svg"
+    },
+    "dark-RBProjectNode.svg": {
+      "iconPath": "dark/RBProjectNode.svg"
+    },
+    "dark-TreeView.svg": {
+      "iconPath": "dark/TreeView.svg"
+    },
+    "dark-ReferenceFolderClosed.svg": {
+      "iconPath": "dark/ReferenceFolderClosed.svg"
+    },
+    "dark-sln.svg": {
+      "iconPath": "dark/sln.svg"
+    },
+    "dark-VBProjectNode.svg": {
+      "iconPath": "dark/VBProjectNode.svg"
+    },
+    "dark-TSProjectNode.svg": {
+      "iconPath": "dark/TSProjectNode.svg"
+    },
+    "Boulder1.Base.png": {
+      "iconPath": "Boulder1.Base.png"
+    }
+  },
+  "fileNames": {
+    "FlatRock.Base.png": "FlatRock.Base.png",
+    "icon.png": "icon.png",
+    "assets/CPPProjectNode.svg": "assets-CPPProjectNode.svg",
+    "assets/BuildSelection.svg": "assets-BuildSelection.svg",
+    "assets/CSProjectNode.svg": "assets-CSProjectNode.svg",
+    "assets/BuildSolution.svg": "assets-BuildSolution.svg",
+    "assets/FilterFolderClosed.svg": "assets-FilterFolderClosed.svg",
+    "assets/FSProjectNode.svg": "assets-FSProjectNode.svg",
+    "assets/FolderClosed.svg": "assets-FolderClosed.svg",
+    "assets/icon.png": "assets-icon.png",
+    "assets/PYProjectNode.svg": "assets-PYProjectNode.svg",
+    "assets/JSProjectNode.svg": "assets-JSProjectNode.svg",
+    "assets/PropertiesFolderClosed.svg": "assets-PropertiesFolderClosed.svg",
+    "assets/RBProjectNode.svg": "assets-RBProjectNode.svg",
+    "assets/ReferenceFolderClosed.svg": "assets-ReferenceFolderClosed.svg",
+    "assets/TreeView.svg": "assets-TreeView.svg",
+    "assets/TSProjectNode.svg": "assets-TSProjectNode.svg",
+    "assets/sln.svg": "assets-sln.svg",
+    "assets/VBProjectNode.svg": "assets-VBProjectNode.svg",
+    "dark/BuildSolution.svg": "dark-BuildSolution.svg",
+    "dark/CPPProjectNode.svg": "dark-CPPProjectNode.svg",
+    "dark/CSProjectNode.svg": "dark-CSProjectNode.svg",
+    "dark/BuildSelection.svg": "dark-BuildSelection.svg",
+    "dark/FolderClosed.svg": "dark-FolderClosed.svg",
+    "dark/FilterFolderClosed.svg": "dark-FilterFolderClosed.svg",
+    "dark/FSProjectNode.svg": "dark-FSProjectNode.svg",
+    "dark/JSProjectNode.svg": "dark-JSProjectNode.svg",
+    "dark/PropertiesFolderClosed.svg": "dark-PropertiesFolderClosed.svg",
+    "dark/PYProjectNode.svg": "dark-PYProjectNode.svg",
+    "dark/RBProjectNode.svg": "dark-RBProjectNode.svg",
+    "dark/TreeView.svg": "dark-TreeView.svg",
+    "dark/ReferenceFolderClosed.svg": "dark-ReferenceFolderClosed.svg",
+    "dark/sln.svg": "dark-sln.svg",
+    "dark/VBProjectNode.svg": "dark-VBProjectNode.svg",
+    "dark/TSProjectNode.svg": "dark-TSProjectNode.svg",
+    "Boulder1.Base.png": "Boulder1.Base.png"
+  }
+}
