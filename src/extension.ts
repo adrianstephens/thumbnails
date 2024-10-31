@@ -103,7 +103,7 @@ async function time_stamp(uri: vscode.Uri) {
 async function updateIconTheme(context: vscode.ExtensionContext) {
 	const iconDir = vscode.Uri.joinPath(context.extensionUri, 'icons');
 	const themeFile = vscode.Uri.joinPath(iconDir, 'thumbnails.json');
-	vscode.workspace.fs.createDirectory(iconDir);
+	await vscode.workspace.fs.createDirectory(iconDir);
 
 	const theme: IconTheme = await vscode.workspace.fs.readFile(themeFile).then(
 		buffer => JSON.parse(buffer.toString()),
@@ -126,7 +126,7 @@ async function updateIconTheme(context: vscode.ExtensionContext) {
 					if (t0 >= t1)
 						return false;
 				}
-
+				await vscode.workspace.fs.createDirectory(dest);
 				const icon	= await handler(file, dest, name);
 				const id	= dirname ? `${dirname}-${icon}` : icon;
 				theme.iconDefinitions[id]	= { iconPath: with_dir(dirname, icon) };

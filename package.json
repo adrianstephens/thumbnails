@@ -3,16 +3,10 @@
 	"displayName": "Thumbnail Icons",
 	"description": "File Icons are thumbnails of their files",
 	"keywords": [],
-	"icon": "assets/icon.png",
+	"icon": "assets/thumb.png",
 	"version": "0.0.0",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/thumbnails",
-	"files": [
-		"out/**/*.js",
-		"assets/*",
-		"!assets/*.psd",
-		"LICENSE.txt"
-	],
 	"engines": {
 		"vscode": "^1.74.0"
 	},
