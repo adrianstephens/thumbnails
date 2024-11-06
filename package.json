@@ -10,11 +10,12 @@
 		"theme"
 	],
 	"icon": "assets/thumb.png",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/thumbnails",
 	"files": [
 		"out/**/*.js",
+		"icons/*",
 		"assets/*",
 		"!assets/*.psd",
 		"node_modules",
