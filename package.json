@@ -10,9 +10,16 @@
 		"theme"
 	],
 	"icon": "assets/thumb.png",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/thumbnails",
+	"files": [
+		"out/**/*.js",
+		"assets/*",
+		"!assets/*.psd",
+		"node_modules",
+		"LICENSE.txt"
+	],
 	"engines": {
 		"vscode": "^1.74.0"
 	},
