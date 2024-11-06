@@ -2,15 +2,24 @@
 	"name": "thumbnails",
 	"displayName": "Thumbnail Icons",
 	"description": "File Icons are thumbnails of their files",
-	"keywords": [],
+	"keywords": [
+		"icons",
+		"thumbnails",
+		"file",
+		"extension",
+		"theme"
+	],
 	"icon": "assets/thumb.png",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/thumbnails",
 	"engines": {
 		"vscode": "^1.74.0"
 	},
-	"categories": [],
+	"categories": [
+		"Themes",
+		"Visualization"
+	],
 	"activationEvents": [
 		"*"
 	],
