@@ -4,7 +4,7 @@
 	"description": "File Icons are thumbnails of their files",
 	"keywords": [],
 	"icon": "assets/thumb.png",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"publisher": "isopodlabs",
 	"repository": "https://github.com/adrianstephens/thumbnails",
 	"engines": {
