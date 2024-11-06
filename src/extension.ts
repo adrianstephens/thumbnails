@@ -14,13 +14,13 @@ interface IconTheme {
 	processedWorkspaces:Record<string, number>;
 }
 /*
-file:	                    Record<string, string>
-folder:	                    Record<string, string>
-folderExpanded:	            Record<string, string>
+file:	                    string;
+folder:	                    string;
+folderExpanded:	            string;
+rootFolder:	                string;
+rootFolderExpanded:	        string;
 folderNames:	            Record<string, string>
 folderNamesExpanded:	    Record<string, string>
-rootFolder:	                Record<string, string>
-rootFolderExpanded:	        Record<string, string>
 rootFolderNames:	        Record<string, string>
 rootFolderNamesExpanded:	Record<string, string>
 languageIds:	            Record<string, string>
@@ -126,8 +126,6 @@ async function time_stamp(uri: vscode.Uri) {
 }
 
 async function updateIconTheme(iconDir: vscode.Uri) {
-	await vscode.workspace.fs.createDirectory(iconDir);
-
 	const themeFile = vscode.Uri.joinPath(iconDir, 'thumbnails.json');
 
 	const theme: IconTheme = await vscode.workspace.fs.readFile(themeFile).then(
@@ -142,8 +140,7 @@ async function updateIconTheme(iconDir: vscode.Uri) {
 	const themeTime 	= theme.processedWorkspaces?.[workspace.fsPath] ?? 0;
 
 	const make_thumbnail = async (file: vscode.Uri, dest: vscode.Uri, dirname: string, name: string) => {
-		let dot = -1;
-		while ((dot = name.indexOf('.', dot + 1)) >= 0) {
+		for (let dot = -1; (dot = name.indexOf('.', dot + 1)) >= 0;) {
 			const handler = handlers[name.slice(dot + 1)];
 			if (handler) {
 				const filename	= with_dir(dirname, name);
@@ -206,6 +203,7 @@ async function updateIconTheme(iconDir: vscode.Uri) {
 	const update = (uri: vscode.Uri) => {
 		const dir		= path.dirname(uri.path);
 		const dirname	= workspace.path === dir ? '' : path.basename(dir);
+		//should check against ignore list
 		make_thumbnail(uri, vscode.Uri.joinPath(iconDir, dirname), dirname, path.basename(uri.fsPath)).then(success => {
 			if (success) {
 				if (timeout)
@@ -254,8 +252,6 @@ async function fallbackTheme(iconDir: vscode.Uri, id: string) {
 	if (extension) {
 		const theme = getIconTheme(extension, id);
 
-		await vscode.workspace.fs.createDirectory(iconDir);
-
 		const sourceFile	= vscode.Uri.joinPath(extension.extensionUri, theme.path);
 		const sourcePath	= vscode.Uri.joinPath(extension.extensionUri, path.dirname(theme.path));
 		const destFile		= vscode.Uri.joinPath(iconDir, 'thumbnails.json');
@@ -302,7 +298,9 @@ export async function activate(context: vscode.ExtensionContext) {
 	const iconDir	= vscode.Uri.joinPath(context.extensionUri, 'icons');
 
 	let theme		= vscode.workspace.getConfiguration("workbench").get<string>("iconTheme");
-	let watcher		= theme === "thumbnails" ? await updateIconTheme(iconDir) : undefined;
+	let watcher		= theme === "thumbnails"
+		? await vscode.workspace.fs.createDirectory(iconDir).then(() => updateIconTheme(iconDir))
+		: undefined;
 
 	// Listen for configuration changes
 	context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(async event => {
@@ -310,9 +308,13 @@ export async function activate(context: vscode.ExtensionContext) {
 			if (watcher) {
 				watcher.dispose();
 				watcher = undefined;
+				const tempdir = iconDir.fsPath + '~';
+				await fs.rename(iconDir.fsPath, tempdir);
+				fs.rm(tempdir, { recursive: true, force: true });
 			}
-			const newtheme		= vscode.workspace.getConfiguration("workbench").get<string>("iconTheme");
+			const newtheme	= vscode.workspace.getConfiguration("workbench").get<string>("iconTheme");
 			if (newtheme === "thumbnails") {
+				await vscode.workspace.fs.createDirectory(iconDir);
 				if (theme && theme !== "thumbnails")
 					await fallbackTheme(iconDir, theme);
 				watcher = await updateIconTheme(iconDir);
