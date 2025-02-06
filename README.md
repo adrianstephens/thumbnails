@@ -1,6 +1,6 @@
 # Thumbnail Icons
 
-This extension provides creates thumbnails and uses them as file icons.
+This extension creates thumbnails of image files and uses them as their file icons.
 
 ![alt text](assets/Screenshot2.png)
 

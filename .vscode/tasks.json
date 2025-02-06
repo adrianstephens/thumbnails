@@ -25,15 +25,28 @@
         },
         {
             "type": "shell",
+            "label": "clean-icons",
+            "command": "rd /q /s icons & mkdir icons & copy nul icons\\thumbnails.json",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
             "label": "PUBLISH",
-            "command": "node E:\\Github\\vscode-vsce\\vsce publish",
+            "command": "node E:\\Github\\vscode-vsce\\vsce publish --allow-star-activation",
             "problemMatcher": [],
             "dependsOn": "prepublish"
         },
         {
             "type": "shell",
             "label": "PACKAGE",
-            "command": "node E:\\Github\\vscode-vsce\\vsce package",
+            "command": "node E:\\Github\\vscode-vsce\\vsce package --allow-star-activation",
+            "problemMatcher": [],
+            "dependsOn": "clean-icons"
+        },
+        {
+            "type": "shell",
+            "label": "WASM compile",
+            "command": "clang --target=wasm32 -nostdlib -Wl,--no-entry -Wl,--export-all -o decoder.wasm decoder.cpp",
             "problemMatcher": []
         }
 

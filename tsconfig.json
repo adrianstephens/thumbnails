@@ -2,24 +2,20 @@
 	"compilerOptions": {
 		"target": "es2022",
 		"module": "CommonJS",
-		"moduleResolution": "Node10",
 		"lib": [
-			"es2022",
-			"ES2021.String"
+			"es2022"
 		],
 		"baseUrl": ".",
 		"paths": {
+			"@shared/*": ["./shared/src/*"],
 			"./out/*": ["./src/*"]
 		},
 		"outDir": "out",
 		"sourceMap": true,
 		"strict": true,
-		"rootDir": "src",
-		"jsx": "react",
-		"jsxFactory": "jsx",
-		"jsxFragmentFactory": "fragment",
+		"rootDir": ".",
 		"forceConsistentCasingInFileNames": true
 	},
-	"include": ["src"],
+	"include": ["src/extension.ts"],
 	"exclude": ["node_modules", ".vscode-test", "hidden"]
 }
